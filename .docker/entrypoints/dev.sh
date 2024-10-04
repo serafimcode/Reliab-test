@@ -5,6 +5,7 @@ until PGHOST=${DB_HOST} PGDATABASE=${DB_NAME} PGPORT=${DB_PORT} PGUSER=${DB_USER
 echo "*** Begin migrate ***"
 
 echo "appenv=$APP_ENV"
+
 export GOOSE_DRIVER=postgres
 export GOOSE_DBSTRING=postgres://${DB_USER}:${DB_PASS}@${DB_HOST}:${DB_PORT}/${DB_NAME}?sslmode=disable
 export GOOSE_MIGRATION_DIR=./migrations
