@@ -1,5 +1,6 @@
 -- +goose Up
 -- +goose StatementBegin
+
 CREATE TABLE IF NOT EXISTS users
 (
     id INT GENERATED ALWAYS AS IDENTITY,
